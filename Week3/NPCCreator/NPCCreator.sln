@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NPCCreator", "NPCCreator\NPCCreator.vcxproj", "{C35B4B13-73C9-4794-BC96-1ED509C2A58E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C35B4B13-73C9-4794-BC96-1ED509C2A58E}.Debug|x64.ActiveCfg = Debug|x64
+		{C35B4B13-73C9-4794-BC96-1ED509C2A58E}.Debug|x64.Build.0 = Debug|x64
+		{C35B4B13-73C9-4794-BC96-1ED509C2A58E}.Debug|x86.ActiveCfg = Debug|Win32
+		{C35B4B13-73C9-4794-BC96-1ED509C2A58E}.Debug|x86.Build.0 = Debug|Win32
+		{C35B4B13-73C9-4794-BC96-1ED509C2A58E}.Release|x64.ActiveCfg = Release|x64
+		{C35B4B13-73C9-4794-BC96-1ED509C2A58E}.Release|x64.Build.0 = Release|x64
+		{C35B4B13-73C9-4794-BC96-1ED509C2A58E}.Release|x86.ActiveCfg = Release|Win32
+		{C35B4B13-73C9-4794-BC96-1ED509C2A58E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {198EF30B-2348-45CC-9E7B-5AD01A950787}
+	EndGlobalSection
+EndGlobal

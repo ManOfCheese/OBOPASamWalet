@@ -9,8 +9,8 @@ public:
 	~LifeStandard();
 	void generateRandomStart();
 	void runSimulation();
-private:
 	void drawGrid();
+private:
 	int checkForLivingNeighbors(int x, int y);
 };
 

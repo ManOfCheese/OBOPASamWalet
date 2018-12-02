@@ -37,14 +37,13 @@ void LifeStandard::runSimulation() {
 					cells[i][j].isAlive = false;
 				}
 			}
-			if (!cells[j][i].isAlive) {
+			if (!cells[i][j].isAlive) {
 				if (checkForLivingNeighbors(i, j) > 2) {
 					cells[i][j].isAlive = true;
 				}
 			}
 		}
 	}
-	drawGrid();
 }
 
 void LifeStandard::drawGrid() {
