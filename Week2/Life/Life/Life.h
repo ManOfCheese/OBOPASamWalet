@@ -8,5 +8,6 @@ public:
 	~Life();
 	virtual void runSimulation() = 0;
 	Cell cells[25][25];
+	Cell calcCells[25][25];
 };
 
