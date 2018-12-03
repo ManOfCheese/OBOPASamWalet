@@ -42,7 +42,6 @@ void Module::gooiBob() {
 	while (it != studenten.end()) {
 		if ((*it)->krijgNaam() == "Bibbert") {
 			std::cout << (*it)->krijgNaam() << " is uit " << naam << " gegooid" << std::endl;
-			delete *it;
 			it = studenten.erase(it);
 		} else {
 			it++;
