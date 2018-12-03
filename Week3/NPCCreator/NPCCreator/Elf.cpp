@@ -13,5 +13,5 @@ Elf::~Elf()
 
 void Elf::render()
 {
-	std::cout << name << std::endl;
+	std::cout << "Elf: " << name << std::endl;
 }

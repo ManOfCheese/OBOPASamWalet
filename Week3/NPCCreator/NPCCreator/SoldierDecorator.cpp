@@ -8,5 +8,5 @@ SoldierDecorator::SoldierDecorator(NPC *_npc) : Decorator(_npc) {
 
 void SoldierDecorator::render() {
 	Decorator::render();
-	std::cout << "- Farmer" << std::endl;
+	std::cout << "- Occupation: Soldier" << std::endl;
 }

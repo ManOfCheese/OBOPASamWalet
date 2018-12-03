@@ -13,5 +13,5 @@ Orc::~Orc()
 
 void Orc::render()
 {
-	std::cout << name << std::endl;
+	std::cout << "Orc: " << name << std::endl;
 }

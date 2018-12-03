@@ -7,5 +7,5 @@ FarmerDecorator::FarmerDecorator(NPC *_npc) : Decorator(_npc) {
 
 void FarmerDecorator::render() {
 	Decorator::render();
-	std::cout << "- Farmer" << std::endl;
+	std::cout << "- Occupation: Farmer" << std::endl;
 }
