@@ -10,24 +10,27 @@ std::list<Transaction> BankAccount::getTransactionHistory() const {
 	return transactionHistory;
 }
 
-void BankAccount::operator+( const Transaction& transaction ) {
+void BankAccount::operator+( Transaction& transaction ) {
+	transaction.setAddition( true );
 	transactionHistory.insert(transactionHistory.end(), transaction);
 	saldo += transaction.getTransactionAmount();
 }
 
-void BankAccount::operator-( const Transaction& transaction ) {
+void BankAccount::operator-( Transaction& transaction ) {
+	transaction.setAddition( false );
 	transactionHistory.insert( transactionHistory.end(), transaction );
 	saldo -= transaction.getTransactionAmount();
 }
 
-std::ostream& operator<<(std::ostream output, const BankAccount& bankAccount) {
-	output << "Saldo: " << bankAccount.saldo << std::endl;
+std::ostream& operator<<( std::ostream& output, const BankAccount& bankAccount ) {
+	output << "Saldo: " << bankAccount.getSaldo() << std::endl;
 
-	std::list<Transaction>::iterator it;
-	for ( it = bankAccount.getTransactionHistory().begin(); it != bankAccount.getTransactionHistory().end(); it++) {
+	std::list<Transaction> transactionHistory = bankAccount.getTransactionHistory();
+	for ( std::list<Transaction>::iterator it = transactionHistory.begin(); it != transactionHistory.end(); it++) {
 		std::string type;
 		if ( it->isAddition() ) { type = "Credit"; }
 		else { type = "Charge"; }
-		return output << type << it->getTransactionAmount() << it->getDate() << std::endl;
+		output << type << " - "  << it->getTransactionAmount() << " - " << it->getDate() << std::endl;
 	}
+	return output;
 }

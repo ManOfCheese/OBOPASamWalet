@@ -27,6 +27,12 @@
     <ClInclude Include="LifeStandard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LifeCustom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifeCustom2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -42,6 +48,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LifeStandard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifeCustom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifeCustom2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

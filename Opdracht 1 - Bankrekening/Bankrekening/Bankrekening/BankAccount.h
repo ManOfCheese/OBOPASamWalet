@@ -5,9 +5,9 @@ class BankAccount {
 	public:
 		float getSaldo() const;
 		std::list<Transaction> getTransactionHistory() const;
-		void operator+( const Transaction& transaction );
-		void operator-( const Transaction& transaction );
-		friend std::ostream &operator<<(std::ostream output, const BankAccount &bankAccount);
+		void operator+( Transaction& transaction );
+		void operator-( Transaction& transaction );
+		friend std::ostream &operator<<(std::ostream &output, const BankAccount &bankAccount);
 
 	private:
 		float saldo;

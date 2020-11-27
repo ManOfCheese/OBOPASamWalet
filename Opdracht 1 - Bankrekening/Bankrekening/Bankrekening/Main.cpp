@@ -6,6 +6,12 @@
 
 int main() {
     BankAccount bankAccount;
+    Transaction *transaction1 = new Transaction( 303, "27-11-2020" );
+    Transaction *transaction2 = new Transaction( 69, "4-20-2016" );
+
+    bankAccount + ( *transaction1 );
+    bankAccount - ( *transaction2 );
+
     std::cout << bankAccount << std::endl;
 }
 
