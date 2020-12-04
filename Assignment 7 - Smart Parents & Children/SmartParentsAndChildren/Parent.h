@@ -12,6 +12,7 @@ public:
     Parent& operator=( const Parent& other );
     void FetusDeletus();
     int CountChildren();
+    Parent ( Parent&& other ) noexcept;
 
     friend std::ostream& operator<<( std::ostream& os, const Parent& parent );
 

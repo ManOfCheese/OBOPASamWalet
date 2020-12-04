@@ -28,6 +28,16 @@ Parent& Parent::operator=(const Parent& other) {
     return *this;
 }
 
+Parent::Parent( Parent&& other ) noexcept {
+    std::cout << "MCTOR" << other.name << "' @" << &other << " to Block @" << this << std::endl;
+    this->name = std::move( other.name );
+    this->child = std::make_unique<Child>( *other.child );
+
+    // 'reset' 't originele object
+    other.name = "(nodata: has been moved)";
+    other.child.reset();
+}
+
 void Parent::FetusDeletus() {
     this->child.reset();
 }

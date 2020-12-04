@@ -1,6 +1,10 @@
 #include <iostream>
 #include "Parent.h"
 
+Parent makeChild( Parent& p ) {
+    return Parent( "Parent4" );
+}
+
 int main() {
     std::shared_ptr<Parent> p1 = std::make_shared<Parent>( "Parent1" );
     std::cout << "p1:" << *p1 << std::endl;
@@ -18,6 +22,8 @@ int main() {
 
     *p3 = *p1; // roept de assignment operator aan
     std::cout << "p1:" << *p3 << std::endl;
+
+    Parent p4 = makeParent( *p1 );
 
     p1->FetusDeletus();
     std::cout << "p1 Child Count: " << p1->CountChildren() << std::endl;
