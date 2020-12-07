@@ -1,8 +1,9 @@
 #include <iostream>
 #include "Parent.h"
 
-Parent makeChild( Parent& p ) {
-    return Parent( "Parent4" );
+Parent copyParent( Parent p ) {
+    Parent parent = Parent( p );
+    return p;
 }
 
 int main() {
@@ -23,12 +24,12 @@ int main() {
     *p3 = *p1; // roept de assignment operator aan
     std::cout << "p1:" << *p3 << std::endl;
 
-    Parent p4 = makeParent( *p1 );
-
     p1->FetusDeletus();
     std::cout << "p1 Child Count: " << p1->CountChildren() << std::endl;
     std::cout << "p2 Child Count: " << p2->CountChildren() << std::endl;
     std::cout << "p3 Child Count: " << p3->CountChildren() << std::endl;
+
+    Parent parent = copyParent( *p3 );
 
     return 0;
 }

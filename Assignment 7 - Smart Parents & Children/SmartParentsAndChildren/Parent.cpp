@@ -29,7 +29,7 @@ Parent& Parent::operator=(const Parent& other) {
 }
 
 Parent::Parent( Parent&& other ) noexcept {
-    std::cout << "MCTOR" << other.name << "' @" << &other << " to Block @" << this << std::endl;
+    std::cout << "Move Copy Contrustor." << std::endl;
     this->name = std::move( other.name );
     this->child = std::make_unique<Child>( *other.child );
 
