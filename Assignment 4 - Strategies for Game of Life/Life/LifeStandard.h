@@ -6,6 +6,5 @@ class LifeStandard : public Life {
 public:
 	LifeStandard();
 	~LifeStandard();
-	void runSimulation();
 };
 

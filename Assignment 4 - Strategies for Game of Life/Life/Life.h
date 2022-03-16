@@ -6,7 +6,7 @@ class Life {
 public:
 	Life();
 	~Life();
-	virtual void runSimulation() = 0;
+	void runSimulation();
 	void generateRandomStart();
 	void generateEmptyStart();
 	void spawnBlinker( int x, int y );
@@ -16,5 +16,8 @@ public:
 	bool calcCells[ 25 ][ 25 ];
 protected:
 	int checkForLivingNeighbors( int x, int y );
+	int minNeighborToLive;
+	int maxNeighborsToLive;
+	int repopulationThreshold;
 };
 
